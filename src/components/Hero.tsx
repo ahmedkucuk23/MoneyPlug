@@ -48,7 +48,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-circuit-grid">
       {/* Gold radial glow */}
-      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle,rgba(201,176,107,0.07)_0%,transparent_65%)] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[min(900px,200vw)] h-[min(900px,200vw)] bg-[radial-gradient(circle,rgba(201,176,107,0.07)_0%,transparent_65%)] pointer-events-none" />
 
       {/* Particles */}
       <GoldParticles />

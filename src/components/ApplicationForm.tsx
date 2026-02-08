@@ -49,9 +49,9 @@ export default function ApplicationForm() {
     "w-full bg-brand-black border border-brand-border rounded-lg px-5 py-4 text-brand-white font-space text-[13px] appearance-none cursor-pointer focus:border-brand-gold transition-colors duration-300";
 
   return (
-    <section id="apply" className="relative py-24 md:py-32 bg-brand-black">
+    <section id="apply" className="relative py-24 md:py-32 bg-brand-black overflow-hidden">
       {/* Gold radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(201,176,107,0.06)_0%,transparent_65%)] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(800px,200vw)] h-[min(800px,200vw)] bg-[radial-gradient(circle,rgba(201,176,107,0.06)_0%,transparent_65%)] pointer-events-none" />
 
       <div className="max-w-3xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Label */}

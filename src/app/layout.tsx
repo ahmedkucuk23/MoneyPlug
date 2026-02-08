@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${bebas.variable} ${spaceMono.variable}`}
+      className={`${montserrat.variable} ${bebas.variable} ${spaceMono.variable} overflow-x-hidden`}
     >
       <body className="font-montserrat bg-brand-black text-brand-white overflow-x-hidden">
         {children}
