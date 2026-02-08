@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #0a0a0a;
+  --dark: #111111;
+  --dark-card: #141414;
+  --dark-border: #1e1e1e;
+  --gold: #c9b06b;
+  --gold-dim: #8b7d4a;
+  --gold-bright: #d6c47a;
+  --gold-glow: rgba(201, 176, 107, 0.12);
+  --green: #1db954;
+  --white: #f5f5f0;
+  --gray: #777777;
+  --gray-light: #999999;
+  --gray-dark: #444444;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Gold gradient text utility */
+.gold-text {
+  background: linear-gradient(180deg, #d6c47a, #8b7d4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Diagonal line background texture */
+.bg-diagonal-lines {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 30px,
+    rgba(201, 176, 107, 0.03) 30px,
+    rgba(201, 176, 107, 0.03) 31px
+  );
+}
+
+/* Dot grid background texture */
+.bg-dot-grid {
+  background-image: radial-gradient(
+    rgba(201, 176, 107, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+}
+
+/* Circuit grid pattern */
+.bg-circuit-grid {
+  background-image:
+    linear-gradient(rgba(201, 176, 107, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 176, 107, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Gold radial glow */
+.gold-glow {
+  position: relative;
+}
+.gold-glow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(201, 176, 107, 0.08) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9b06b;
+}
+
+/* Form focus styles */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #c9b06b !important;
+  box-shadow: 0 0 0 1px rgba(201, 176, 107, 0.3);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(201, 176, 107, 0.3);
+  color: #f5f5f0;
+}
