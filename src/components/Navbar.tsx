@@ -38,17 +38,17 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="font-montserrat font-black text-sm tracking-[4px] select-none"
+            className="select-none flex items-center"
           >
-            <span className="text-brand-white">MONEY</span>{" "}
-            <span className="text-brand-gold">PLUG</span>
-            <span className="text-brand-gold text-[10px] align-super ml-0.5">
-              ™
-            </span>
+            <img
+              src="/images/logo-header.png"
+              alt="Money Plug Lab"
+              style={{ height: '38px', width: 'auto', maxWidth: 'none' }}
+            />
           </button>
 
           {/* Desktop Links */}

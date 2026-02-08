@@ -40,7 +40,7 @@ export default function Problem() {
 
         {/* Headline */}
         <ScrollReveal delay={0.1}>
-          <h2 className="font-montserrat font-black text-[clamp(28px,4vw,48px)] leading-tight mb-6">
+          <h2 className="font-bebas text-[clamp(36px,5vw,56px)] tracking-[5px] leading-none mb-6">
             The Creator Economy Has a{" "}
             <span className="gold-text">$50B</span> Problem
           </h2>

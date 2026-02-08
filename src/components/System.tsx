@@ -48,7 +48,7 @@ export default function System() {
 
         {/* Headline */}
         <ScrollReveal delay={0.1}>
-          <h2 className="font-montserrat font-black text-[clamp(28px,4vw,48px)] leading-tight mb-16">
+          <h2 className="font-bebas text-[clamp(36px,5vw,56px)] tracking-[5px] leading-none mb-16">
             The Money Plug <span className="gold-text">Model</span>
           </h2>
         </ScrollReveal>

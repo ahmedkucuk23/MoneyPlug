@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -9,12 +8,11 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
           <div className="flex items-center gap-4">
-            <Image
+            <img
               src="/images/logo-mpl.png"
               alt="Money Plug Lab"
               width={60}
               height={60}
-              className="rounded"
             />
             <div>
               <span className="font-montserrat font-black text-sm tracking-[3px] text-brand-gold block">

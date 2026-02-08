@@ -63,7 +63,7 @@ export default function ApplicationForm() {
 
         {/* Headline */}
         <ScrollReveal delay={0.1}>
-          <h2 className="font-montserrat font-black text-[clamp(28px,4vw,48px)] leading-tight mb-4 text-center">
+          <h2 className="font-bebas text-[clamp(36px,5vw,56px)] tracking-[5px] leading-none mb-4 text-center">
             Apply to <span className="gold-text">Work With Me</span>
           </h2>
         </ScrollReveal>

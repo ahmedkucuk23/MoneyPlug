@@ -65,7 +65,7 @@ export default function CaseStudies() {
 
         {/* Headline */}
         <ScrollReveal delay={0.1}>
-          <h2 className="font-montserrat font-black text-[clamp(28px,4vw,48px)] leading-tight mb-16">
+          <h2 className="font-bebas text-[clamp(36px,5vw,56px)] tracking-[5px] leading-none mb-16">
             We Don&apos;t Talk. We{" "}
             <span className="gold-text">Prove.</span>
           </h2>

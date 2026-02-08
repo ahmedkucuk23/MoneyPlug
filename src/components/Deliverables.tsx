@@ -76,7 +76,7 @@ export default function Deliverables() {
 
         {/* Headline */}
         <ScrollReveal delay={0.1}>
-          <h2 className="font-montserrat font-black text-[clamp(28px,4vw,48px)] leading-tight mb-16">
+          <h2 className="font-bebas text-[clamp(36px,5vw,56px)] tracking-[5px] leading-none mb-16">
             Everything. <span className="gold-text">Engineered.</span> Delivered.
           </h2>
         </ScrollReveal>
@@ -107,7 +107,7 @@ export default function Deliverables() {
 
         {/* Closing tagline */}
         <ScrollReveal delay={0.3}>
-          <p className="text-center mt-20 font-montserrat font-black text-xl md:text-2xl tracking-wide">
+          <p className="text-center mt-20 font-bebas text-[clamp(28px,4vw,42px)] tracking-[4px]">
             Everything.{" "}
             <span className="gold-text">Engineered.</span>{" "}
             Delivered.

@@ -37,32 +37,42 @@ body {
   background-clip: text;
 }
 
-/* Diagonal line background texture */
+/* Diagonal line background texture — brand book: 22px spacing, 0.06 opacity */
 .bg-diagonal-lines {
   background-image: repeating-linear-gradient(
     45deg,
     transparent,
-    transparent 30px,
-    rgba(201, 176, 107, 0.03) 30px,
-    rgba(201, 176, 107, 0.03) 31px
+    transparent 22px,
+    rgba(201, 176, 107, 0.06) 22px,
+    rgba(201, 176, 107, 0.06) 23px
   );
 }
 
-/* Dot grid background texture */
+/* Dot grid background texture — brand book: gold 1px dots, 26px grid, 0.2 opacity */
 .bg-dot-grid {
+  position: relative;
+}
+.bg-dot-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image: radial-gradient(
-    rgba(201, 176, 107, 0.08) 1px,
+    circle,
+    #c9b06b 1px,
     transparent 1px
   );
-  background-size: 24px 24px;
+  background-size: 26px 26px;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* Circuit grid pattern */
+/* Circuit grid pattern — brand book: 44px grid, 0.08 opacity */
 .bg-circuit-grid {
   background-image:
-    linear-gradient(rgba(201, 176, 107, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201, 176, 107, 0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
+    linear-gradient(90deg, rgba(201, 176, 107, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(201, 176, 107, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
 }
 
 /* Gold radial glow */
