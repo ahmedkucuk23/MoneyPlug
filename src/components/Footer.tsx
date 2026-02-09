@@ -56,7 +56,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-brand-border text-center">
           <p className="font-space text-[10px] text-brand-gray-dark tracking-[3px]">
-            © 2026 Money Plug Lab™ — Sarajevo, Bosnia
+            © 2026 Money Plug Lab™
           </p>
         </div>
       </div>

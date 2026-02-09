@@ -29,11 +29,15 @@ const config: Config = {
       fontFamily: {
         montserrat: ["var(--font-montserrat)", "sans-serif"],
         bebas: ["var(--font-bebas)", "sans-serif"],
-        space: ["var(--font-space)", "monospace"],
+        space: ["var(--font-space)", "sans-serif"],
       },
       backgroundImage: {
         "gold-gradient": "linear-gradient(180deg, #D6C47A, #8B7D4A)",
         "gold-gradient-h": "linear-gradient(90deg, #C9B06B, #8B7D4A)",
+        "champagne": "linear-gradient(135deg, #D6C47A, #C9B06B, #8B7D4A)",
+        "dark-depth": "linear-gradient(180deg, #1A1A1A, #0A0A0A, #050505)",
+        "money-fade": "linear-gradient(135deg, #0A0A0A, #1A2E1A, #0D3B0D, #0A0A0A)",
+        "gold-ambient": "radial-gradient(ellipse at 30% 50%, rgba(201,176,107,0.15), transparent 60%)",
       },
       letterSpacing: {
         widest2: "0.25em",

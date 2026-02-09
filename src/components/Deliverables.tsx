@@ -63,7 +63,7 @@ export default function Deliverables() {
   return (
     <section
       id="deliverables"
-      className="relative py-24 md:py-32 bg-brand-section bg-diagonal-lines"
+      className="relative py-24 md:py-32 bg-brand-black"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Label */}
