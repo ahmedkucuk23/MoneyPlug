@@ -31,10 +31,10 @@ const stats = [
   },
   {
     value: 5,
-    suffix: "",
-    label: "Stars",
+    suffix: "/5",
+    label: "Rating",
     color: "gold" as const,
-    desc: "rated by 50+ members",
+    desc: "course rated by 50+ members",
   },
 ];
 
@@ -59,28 +59,12 @@ export default function Hero() {
         <div className="grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-16 items-center">
           {/* Left content */}
           <div className="text-center lg:text-left">
-            {/* Eyebrow */}
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="font-space text-[10px] tracking-[5px] text-brand-gold uppercase block mb-4"
-            >
-              WHO AM I?
-            </motion.span>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="w-12 h-[2px] bg-gold-gradient-h mb-8 mx-auto lg:mx-0"
-            />
-
             {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.7 }}
-              className="font-montserrat font-black text-[clamp(36px,5.5vw,64px)] leading-[1.05] tracking-tight mb-6 uppercase"
+              className="font-montserrat font-black text-[clamp(36px,5.5vw,64px)] leading-[1.05] tracking-tight mb-6"
             >
               I Plug Influencers
               <br />
@@ -96,7 +80,6 @@ export default function Hero() {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="font-space text-brand-cream text-[14px] leading-relaxed max-w-lg mx-auto lg:mx-0 mb-10"
             >
-              We build, launch &amp; sell digital products for influencers.
               I build your digital product and give you a step-by-step plan
               to sell it. All powered by software built by me specifically
               for influencers and digital creators.{" "}

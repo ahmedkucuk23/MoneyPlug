@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogoBar from "@/components/LogoBar";
-import GhostSection from "@/components/GhostSection";
+import Differentiator from "@/components/Differentiator";
+import Proof from "@/components/Proof";
 import Problem from "@/components/Problem";
 import Pipeline from "@/components/Pipeline";
 import System from "@/components/System";
@@ -16,6 +17,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       {/* <LogoBar /> */}
+      <Differentiator />
+      <div className="max-w-7xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
+      <Proof />
+      <div className="max-w-7xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
       <Problem />
       <div className="max-w-7xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
       <Pipeline />
@@ -25,7 +30,6 @@ export default function Home() {
       <CaseStudies />
       <div className="max-w-7xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
       <Deliverables />
-      <GhostSection />
       <ApplicationForm />
       <Footer />
     </main>
