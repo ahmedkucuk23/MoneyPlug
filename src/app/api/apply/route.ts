@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     }
 
     await resend.emails.send({
-      from: "Money Plug <onboarding@resend.dev>",
+      from: "Money Plug <apply@money-plug.com>",
       to: process.env.NOTIFY_EMAIL || "info@money-plug.com",
       subject: `New Application: ${name} (${instagram})`,
       html: `
