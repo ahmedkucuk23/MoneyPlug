@@ -55,7 +55,6 @@ export default function Proof() {
                     target={stat.target}
                     suffix={stat.suffix}
                     prefix={stat.prefix}
-                    decimals={stat.decimals}
                   />
                 </span>
                 <span className="block font-space text-[9px] tracking-[3px] text-brand-gray uppercase mt-2">
