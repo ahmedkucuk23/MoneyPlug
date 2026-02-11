@@ -28,7 +28,7 @@ const cards = [
 export default function Differentiator() {
   return (
     <section id="different" className="relative py-24 md:py-32 bg-brand-black">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12">
         {/* Label */}
         <ScrollReveal>
           <span className="font-space text-[9px] tracking-[4px] text-brand-gold uppercase block mb-3.5">

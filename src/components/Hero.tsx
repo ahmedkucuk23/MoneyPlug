@@ -54,7 +54,7 @@ export default function Hero() {
       {/* Particles */}
       <GoldParticles />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-32 lg:pt-24 pb-16 w-full">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-12 pt-32 lg:pt-24 pb-16 w-full">
         <div className="grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-16 items-center">
           {/* Left content */}
           <div className="text-center lg:text-left">

@@ -38,7 +38,7 @@ export default function System() {
   return (
     <section id="system" className="relative py-24 md:py-32 bg-brand-black">
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(201,176,107,0.05)_0%,transparent_70%)] pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12">
         {/* Label */}
         <ScrollReveal>
           <span className="font-space text-[10px] tracking-[5px] text-brand-gold uppercase block mb-4">
