@@ -25,19 +25,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Money Plug - I Help Influencers Sell Digital Products | €0 Upfront",
+  title: "Money Plug™ | Creator Monetization Systems & Revenue Engineering",
   description:
-    "I create, launch, and sell digital products for influencers. €0 upfront — commission only. 0.38% conversion rate. Apply now.",
+    "I engineer digital products, build launch systems, and turn your followers into revenue. €0 upfront — commission only. 150+ sales from a 26K account in 4 days. Apply now.",
   keywords: [
-    "influencer monetization",
+    "creator monetization",
     "sell digital products instagram",
     "launch course instagram",
-    "influencer revenue",
+    "creator revenue system",
     "monetize followers",
     "digital product launch",
     "instagram monetization 2026",
     "Money Plug",
     "Money Plug Lab",
+    "revenue engineering",
+    "creator economy",
   ],
   authors: [{ name: "Money Plug™" }],
   robots: {
@@ -55,9 +57,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://money-plug.com/",
-    title: "I Help Influencers Sell Digital Products — €0 Upfront",
+    title: "Money Plug™ | Creator Monetization Systems & Revenue Engineering",
     description:
-      "Monetization system for influencers. €0 upfront — commission only. 0.38% proven conversion rate. Apply now.",
+      "I engineer digital products, build launch systems, and turn followers into revenue. €0 upfront — commission only. 150+ sales in 4 days. Apply now.",
     siteName: "Money Plug™",
     locale: "en_US",
     images: [
@@ -70,9 +72,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "I Help Influencers Sell Digital Products — €0 Upfront",
+    title: "Money Plug™ | Creator Monetization Systems & Revenue Engineering",
     description:
-      "Monetization system for influencers. Commission only. Apply now.",
+      "I engineer digital products, build launch systems, and turn followers into revenue. Commission only. Apply now.",
     images: ["https://money-plug.com/og-image.png"],
   },
   icons: {
