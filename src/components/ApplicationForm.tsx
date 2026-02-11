@@ -31,15 +31,31 @@ export default function ApplicationForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const [error, setError] = useState("");
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    setError("");
 
-    // Simulate form submission — replace with actual webhook/API
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
 
-    setSubmitted(true);
-    setLoading(false);
+    try {
+      const res = await fetch("/api/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Try again or DM me on Instagram.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputBase =
@@ -252,6 +268,12 @@ export default function ApplicationForm() {
                       "SUBMIT APPLICATION →"
                     )}
                   </button>
+
+                  {error && (
+                    <p className="font-space text-[12px] text-red-400 text-center pt-1">
+                      {error}
+                    </p>
+                  )}
 
                   {/* Note */}
                   <p className="font-space text-[10px] text-brand-gray-dark text-center tracking-wide pt-2">
