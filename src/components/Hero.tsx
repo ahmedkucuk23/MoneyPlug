@@ -13,13 +13,12 @@ const stats = [
     desc: "from a single launch, 4 days, zero ad spend",
   },
   {
-    value: 9.7,
+    value: 10,
     suffix: "K",
     prefix: "€",
     label: "Revenue",
     color: "green" as const,
     desc: "from an Instagram creator with 26K followers",
-    decimals: 1,
   },
   {
     value: 0.38,

@@ -4,14 +4,13 @@ import ScrollReveal from "./ScrollReveal";
 import CounterAnimation from "./CounterAnimation";
 
 const stats = [
-  { target: 100, suffix: "+", label: "Sales", color: "text-brand-white" },
+  { target: 150, suffix: "+", label: "Sales", color: "text-brand-white" },
   {
-    target: 9.7,
+    target: 10,
     suffix: "K",
     prefix: "€",
     label: "Revenue",
     color: "text-brand-green",
-    decimals: 1,
   },
   { target: 26, suffix: "K", label: "Followers", color: "text-brand-gold" },
   { target: 4, suffix: "", label: "Days", color: "text-brand-white" },
@@ -67,56 +66,46 @@ export default function Proof() {
           </div>
         </ScrollReveal>
 
-        {/* Testimonial card */}
-        <ScrollReveal delay={0.2}>
-          <div className="bg-brand-section border border-brand-border rounded-2xl p-8 md:p-10 mb-8">
-            {/* Quote */}
-            <blockquote className="text-brand-white text-lg md:text-xl leading-relaxed mb-8 italic">
-              &ldquo;Brate, ovo je nevjerovatno. Od nula do 100+ prodaja u 4
-              dana. Nisam mogla vjerovati kad sam vidjela brojeve. Svaka ti
-              čast.&rdquo;
-            </blockquote>
-
-            {/* Creator info */}
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-brand-gold/20 border border-brand-gold/30 flex items-center justify-center font-montserrat font-black text-brand-gold text-lg">
-                B
-              </div>
-              <div>
-                <p className="font-montserrat font-bold text-brand-white text-[15px]">
-                  Bezdrob
-                </p>
-                <p className="font-space text-[11px] text-brand-gray tracking-wide">
-                  @bezdrob.tp · 26K followers · Fitness
-                </p>
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
-
-        {/* DM Screenshot + Video placeholders */}
+        {/* Testimonial + DM Screenshot */}
         <div className="grid md:grid-cols-2 gap-6 mb-10">
-          <ScrollReveal delay={0.25}>
-            <div className="bg-brand-section border border-brand-border rounded-2xl p-8 flex flex-col items-center justify-center min-h-[280px] text-center">
-              <span className="text-4xl mb-4">💬</span>
-              <p className="font-space text-[10px] tracking-[3px] text-brand-gray-dark uppercase">
-                REAL DM SCREENSHOT
-              </p>
-              <p className="text-[13px] text-brand-gray-dark mt-2">
-                Replace with actual conversation screenshot
-              </p>
+          {/* Testimonial card */}
+          <ScrollReveal delay={0.2}>
+            <div className="bg-brand-section border border-brand-border rounded-2xl p-8 md:p-10 h-full flex flex-col">
+              {/* Quote */}
+              <blockquote className="text-brand-white text-lg md:text-xl leading-relaxed mb-8 italic flex-1">
+                &ldquo;Before we started working together, I had followers but I
+                didn&apos;t know how to actually turn them into money. Now I have
+                a complete system. In 5 days, 130+ sales, 0 spent on ads, all
+                organic. Anyone who has followers on Instagram should be working
+                with you.&rdquo;
+              </blockquote>
+
+              {/* Creator info */}
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-brand-gold/20 border border-brand-gold/30 flex items-center justify-center font-montserrat font-black text-brand-gold text-lg">
+                  B
+                </div>
+                <div>
+                  <p className="font-montserrat font-bold text-brand-white text-[15px]">
+                    Bezdrob
+                  </p>
+                  <p className="font-space text-[11px] text-brand-gray tracking-wide">
+                    @bezdrob.tp · 26K followers · Fitness
+                  </p>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.3}>
-            <div className="bg-brand-section border border-brand-border rounded-2xl p-8 flex flex-col items-center justify-center min-h-[280px] text-center">
-              <span className="text-4xl mb-4">🎬</span>
-              <p className="font-space text-[10px] tracking-[3px] text-brand-gray-dark uppercase">
-                VIDEO TESTIMONIAL
-              </p>
-              <p className="text-[13px] text-brand-gray-dark mt-2">
-                Embed Bezdrob video/reel talking about results
-              </p>
+          {/* Real DM Screenshot */}
+          <ScrollReveal delay={0.25}>
+            <div className="bg-brand-section border border-brand-border rounded-2xl overflow-hidden h-full">
+              <img
+                src="/images/dm-bezdrob.jpg"
+                alt="DM conversation with Bezdrob — 130+ sales, 0 ad spend, all organic"
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
             </div>
           </ScrollReveal>
         </div>
@@ -143,7 +132,7 @@ export default function Proof() {
                 AFTER
               </span>
               <p className="text-brand-white text-[14px] leading-relaxed">
-                100+ sales. €9,700 revenue. Complete digital product. Automated
+                150+ sales. €10K revenue. Complete digital product. Automated
                 sales system. 4 days. €0 ad spend.
               </p>
             </div>

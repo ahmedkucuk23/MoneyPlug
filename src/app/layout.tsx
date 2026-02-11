@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Bebas_Neue, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -157,7 +158,7 @@ export default function RootLayout({
                   name: "What conversion rate can I expect?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Money Plug's system has achieved a 0.38% conversion rate from organic Instagram traffic — nearly 4x the industry average of 0.1%. From a 26K follower account, this generated 150+ sales and €9,700 in revenue in just 4 days.",
+                    text: "Money Plug's system has achieved a 0.38% conversion rate from organic Instagram traffic — nearly 4x the industry average of 0.1%. From a 26K follower account, this generated 150+ sales and €10K in revenue in just 4 days.",
                   },
                 },
                 {
@@ -165,7 +166,7 @@ export default function RootLayout({
                   name: "Do I need a big following to sell a digital product?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "No. A 26K account generated €9,700 in 4 days with the Money Plug system. What matters is engagement quality and the right launch strategy, not follower count.",
+                    text: "No. A 26K account generated €10K in 4 days with the Money Plug system. What matters is engagement quality and the right launch strategy, not follower count.",
                   },
                 },
                 {
@@ -181,6 +182,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
