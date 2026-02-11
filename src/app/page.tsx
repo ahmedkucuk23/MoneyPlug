@@ -5,6 +5,7 @@ import Differentiator from "@/components/Differentiator";
 import Proof from "@/components/Proof";
 import Problem from "@/components/Problem";
 import Pipeline from "@/components/Pipeline";
+import Calculator from "@/components/Calculator";
 import System from "@/components/System";
 import CaseStudies from "@/components/CaseStudies";
 import Deliverables from "@/components/Deliverables";
@@ -24,6 +25,8 @@ export default function Home() {
       <Problem />
       <div className="max-w-7xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
       <Pipeline />
+      <div className="max-w-7xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
+      <Calculator />
       <div className="max-w-7xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
       <System />
       <div className="max-w-7xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
