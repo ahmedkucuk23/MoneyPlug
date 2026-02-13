@@ -8,6 +8,7 @@ import Pipeline from "@/components/Pipeline";
 import Calculator from "@/components/Calculator";
 import System from "@/components/System";
 import ApplicationForm from "@/components/ApplicationForm";
+import Platform from "@/components/Platform";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,17 +17,17 @@ export default function Home() {
       <Navbar />
       <Hero />
       {/* <LogoBar /> */}
+      <System />
+      <div className="max-w-6xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
       <Differentiator />
       <div className="max-w-6xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
       <Proof />
       <div className="max-w-6xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
-      <Problem />
+      <Calculator />
       <div className="max-w-6xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
       <Pipeline />
       <div className="max-w-6xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
-      <Calculator />
-      <div className="max-w-6xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
-      <System />
+      <Platform />
       <div className="max-w-6xl mx-auto px-6 lg:px-12"><div className="h-px bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" /></div>
       <ApplicationForm />
       <Footer />

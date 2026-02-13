@@ -1,69 +1,45 @@
 "use client";
 
+import { Brain, Target, Banknote, Rocket, MessageSquare, TrendingUp } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import { useLanguage } from "@/i18n/LanguageContext";
 
-const steps = [
-  {
-    num: "01",
-    title: "Audience Psychology Analysis",
-    icon: "🧠",
-    desc: "AI-powered deep dive into your followers — what they want, what they fear, and what triggers them to buy.",
-  },
-  {
-    num: "02",
-    title: "Your Digital Product",
-    icon: "🎯",
-    desc: "Course, coaching program, or guide — designed, structured, and recorded. Built around what your audience actually pays for.",
-  },
-  {
-    num: "03",
-    title: "Sales Page + Payments",
-    icon: "💰",
-    desc: "Landing page, checkout, delivery — multi-tier pricing engineered to maximize every sale. Ready to accept money.",
-  },
-  {
-    num: "04",
-    title: "14-Day Launch Campaign",
-    icon: "🚀",
-    desc: "Daily story scripts, content calendar, psychological triggers — every post mapped to move your audience from watching to buying.",
-  },
-  {
-    num: "05",
-    title: "DM Scripts + Closing",
-    icon: "💬",
-    desc: "Pre-written sequences that turn story viewers into buyers. Objection handling, lead capture, and closing — all scripted.",
-  },
-  {
-    num: "06",
-    title: "Content + Post-Launch Scaling",
-    icon: "📈",
-    desc: "Branded templates, content strategy, performance optimization, and the roadmap for your next product launch.",
-  },
-];
+const stepIcons = [Brain, Target, Banknote, Rocket, MessageSquare, TrendingUp];
 
 export default function Pipeline() {
+  const { t } = useLanguage();
+
+  const steps = [
+    { num: "01", title: t("pipeline.step1Title"), Icon: stepIcons[0], desc: t("pipeline.step1Desc") },
+    { num: "02", title: t("pipeline.step2Title"), Icon: stepIcons[1], desc: t("pipeline.step2Desc") },
+    { num: "03", title: t("pipeline.step3Title"), Icon: stepIcons[2], desc: t("pipeline.step3Desc") },
+    { num: "04", title: t("pipeline.step4Title"), Icon: stepIcons[3], desc: t("pipeline.step4Desc") },
+    { num: "05", title: t("pipeline.step5Title"), Icon: stepIcons[4], desc: t("pipeline.step5Desc") },
+    { num: "06", title: t("pipeline.step6Title"), Icon: stepIcons[5], desc: t("pipeline.step6Desc") },
+  ];
+
   return (
     <section id="pipeline" className="relative py-24 md:py-32 bg-brand-black">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         {/* Label */}
         <ScrollReveal>
-          <span className="font-space text-[9px] tracking-[4px] text-brand-gold uppercase block mb-3.5">
-            WHAT I BUILD
+          <span className="font-space text-[11px] tracking-[4px] text-brand-gold uppercase block mb-3.5">
+            {t("pipeline.label")}
           </span>
         </ScrollReveal>
 
         {/* Headline */}
         <ScrollReveal delay={0.05}>
           <h2 className="font-montserrat font-black text-[clamp(28px,4.5vw,44px)] leading-[1.1] tracking-tight">
-            From your followers to{" "}
-            <span className="gold-text">money in your account.</span>
+            {t("pipeline.headline")}{" "}
+            <span className="gold-text">{t("pipeline.headlineAccent")}</span>
           </h2>
         </ScrollReveal>
 
         {/* Subhead */}
         <ScrollReveal delay={0.1}>
           <p className="text-brand-gray text-[15px] leading-relaxed mt-2.5 max-w-[480px]">
-            6 steps. I engineer all of them. You show up at the end and sell.
+            {t("pipeline.subhead")}
           </p>
         </ScrollReveal>
 
@@ -86,7 +62,7 @@ export default function Pipeline() {
                     <h3 className="font-montserrat font-extrabold text-base md:text-[17px] leading-tight text-brand-white">
                       {step.title}
                     </h3>
-                    <span className="text-[22px] flex-shrink-0">{step.icon}</span>
+                    <step.Icon size={22} strokeWidth={1.5} className="text-brand-gold flex-shrink-0" />
                   </div>
                   <p className="text-[13px] text-brand-gray leading-relaxed">
                     {step.desc}
@@ -104,11 +80,11 @@ export default function Pipeline() {
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-brand-gold-dim via-brand-gold to-brand-gold-dim" />
 
             <p className="font-montserrat font-extrabold text-[clamp(16px,2.5vw,20px)] text-brand-gray">
-              You bring the audience. I build the{" "}
-              <span className="text-brand-gold">money machine.</span>
+              {t("pipeline.resultLine1")}{" "}
+              <span className="text-brand-gold">{t("pipeline.resultAccent")}</span>
             </p>
             <p className="text-[13px] text-brand-gray-dark mt-1.5">
-              Every step engineered. Every asset delivered. You just show up and post.
+              {t("pipeline.resultLine2")}
             </p>
           </div>
         </ScrollReveal>

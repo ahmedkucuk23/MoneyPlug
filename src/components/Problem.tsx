@@ -33,7 +33,7 @@ export default function Problem() {
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         {/* Label */}
         <ScrollReveal>
-          <span className="font-space text-[10px] tracking-[5px] text-brand-gold uppercase block mb-4">
+          <span className="font-space text-[11px] tracking-[5px] text-brand-gold uppercase block mb-4">
             THE PROBLEM
           </span>
           <div className="w-12 h-[2px] bg-gold-gradient-h mb-8" />

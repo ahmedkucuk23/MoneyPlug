@@ -3,14 +3,15 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const followerOptions = [
   "Under 10K",
-  "10K–25K",
-  "25K–50K",
-  "50K–100K",
-  "100K–250K",
-  "250K–500K",
+  "10K\u201325K",
+  "25K\u201350K",
+  "50K\u2013100K",
+  "100K\u2013250K",
+  "250K\u2013500K",
   "500K+",
 ];
 
@@ -25,13 +26,13 @@ const nicheOptions = [
   "Other",
 ];
 
-const revenueOptions = ["€0", "€1–500", "€500–2K", "€2K–5K", "€5K+"];
+const revenueOptions = ["\u20AC0", "\u20AC1\u2013500", "\u20AC500\u20132K", "\u20AC2K\u20135K", "\u20AC5K+"];
 
 export default function ApplicationForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-
   const [error, setError] = useState("");
+  const { t } = useLanguage();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -52,7 +53,7 @@ export default function ApplicationForm() {
 
       setSubmitted(true);
     } catch {
-      setError("Something went wrong. Try again or DM me on Instagram.");
+      setError(t("apply.error"));
     } finally {
       setLoading(false);
     }
@@ -72,23 +73,21 @@ export default function ApplicationForm() {
       <div className="max-w-3xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Label */}
         <ScrollReveal>
-          <span className="font-space text-[10px] tracking-[5px] text-brand-gold uppercase block mb-4 text-center">
-            LIMITED SPOTS
+          <span className="font-space text-[11px] tracking-[5px] text-brand-gold uppercase block mb-4 text-center">
+            {t("apply.label")}
           </span>
         </ScrollReveal>
 
         {/* Headline */}
         <ScrollReveal delay={0.1}>
           <h2 className="font-bebas text-[clamp(36px,5vw,56px)] tracking-[5px] leading-none mb-4 text-center">
-            Apply to <span className="gold-text">Work With Me</span>
+            {t("apply.headline")} <span className="gold-text">{t("apply.headlineAccent")}</span>
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
           <p className="text-brand-gray text-[14px] leading-relaxed text-center max-w-xl mx-auto mb-12">
-            I only work with 5 creators per quarter. Not everyone qualifies.
-            Fill out the application — if we&apos;re a fit, I&apos;ll reach out
-            within 48 hours.
+            {t("apply.subhead")}
           </p>
         </ScrollReveal>
 
@@ -105,13 +104,12 @@ export default function ApplicationForm() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-12"
                 >
-                  <span className="text-4xl mb-4 block">✓</span>
+                  <span className="text-4xl mb-4 block">&check;</span>
                   <h3 className="font-montserrat font-bold text-2xl text-brand-gold mb-3">
-                    Application Received
+                    {t("apply.successTitle")}
                   </h3>
                   <p className="font-space text-[13px] text-brand-gray">
-                    If we&apos;re a fit, you&apos;ll hear from me within 48
-                    hours.
+                    {t("apply.successMessage")}
                   </p>
                 </motion.div>
               ) : (
@@ -119,26 +117,26 @@ export default function ApplicationForm() {
                   {/* Row: Name + Instagram */}
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
-                      <label className="font-space text-[9px] tracking-[3px] text-brand-gray uppercase block mb-2">
-                        Name
+                      <label className="font-space text-[11px] tracking-[3px] text-brand-gray uppercase block mb-2">
+                        {t("apply.nameLabel")}
                       </label>
                       <input
                         type="text"
                         name="name"
                         required
-                        placeholder="Your full name"
+                        placeholder={t("apply.namePlaceholder")}
                         className={inputBase}
                       />
                     </div>
                     <div>
-                      <label className="font-space text-[9px] tracking-[3px] text-brand-gray uppercase block mb-2">
-                        Instagram Handle
+                      <label className="font-space text-[11px] tracking-[3px] text-brand-gray uppercase block mb-2">
+                        {t("apply.instagramLabel")}
                       </label>
                       <input
                         type="text"
                         name="instagram"
                         required
-                        placeholder="@yourhandle"
+                        placeholder={t("apply.instagramPlaceholder")}
                         className={inputBase}
                       />
                     </div>
@@ -147,8 +145,8 @@ export default function ApplicationForm() {
                   {/* Row: Followers + Niche */}
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
-                      <label className="font-space text-[9px] tracking-[3px] text-brand-gray uppercase block mb-2">
-                        Follower Count
+                      <label className="font-space text-[11px] tracking-[3px] text-brand-gray uppercase block mb-2">
+                        {t("apply.followersLabel")}
                       </label>
                       <div className="relative">
                         <select
@@ -158,7 +156,7 @@ export default function ApplicationForm() {
                           className={selectBase}
                         >
                           <option value="" disabled>
-                            Select range
+                            {t("apply.selectRange")}
                           </option>
                           {followerOptions.map((opt) => (
                             <option key={opt} value={opt}>
@@ -167,13 +165,13 @@ export default function ApplicationForm() {
                           ))}
                         </select>
                         <span className="absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray pointer-events-none text-xs">
-                          ▼
+                          &darr;
                         </span>
                       </div>
                     </div>
                     <div>
-                      <label className="font-space text-[9px] tracking-[3px] text-brand-gray uppercase block mb-2">
-                        Niche
+                      <label className="font-space text-[11px] tracking-[3px] text-brand-gray uppercase block mb-2">
+                        {t("apply.nicheLabel")}
                       </label>
                       <div className="relative">
                         <select
@@ -183,7 +181,7 @@ export default function ApplicationForm() {
                           className={selectBase}
                         >
                           <option value="" disabled>
-                            Select niche
+                            {t("apply.selectNiche")}
                           </option>
                           {nicheOptions.map((opt) => (
                             <option key={opt} value={opt}>
@@ -192,7 +190,7 @@ export default function ApplicationForm() {
                           ))}
                         </select>
                         <span className="absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray pointer-events-none text-xs">
-                          ▼
+                          &darr;
                         </span>
                       </div>
                     </div>
@@ -200,8 +198,8 @@ export default function ApplicationForm() {
 
                   {/* Current Revenue */}
                   <div>
-                    <label className="font-space text-[9px] tracking-[3px] text-brand-gray uppercase block mb-2">
-                      Current Monthly Revenue from Audience
+                    <label className="font-space text-[11px] tracking-[3px] text-brand-gray uppercase block mb-2">
+                      {t("apply.revenueLabel")}
                     </label>
                     <div className="relative">
                       <select
@@ -211,7 +209,7 @@ export default function ApplicationForm() {
                         className={selectBase}
                       >
                         <option value="" disabled>
-                          Select range
+                          {t("apply.selectRange")}
                         </option>
                         {revenueOptions.map((opt) => (
                           <option key={opt} value={opt}>
@@ -220,35 +218,35 @@ export default function ApplicationForm() {
                         ))}
                       </select>
                       <span className="absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray pointer-events-none text-xs">
-                        ▼
+                        &darr;
                       </span>
                     </div>
                   </div>
 
                   {/* Biggest Challenge */}
                   <div>
-                    <label className="font-space text-[9px] tracking-[3px] text-brand-gray uppercase block mb-2">
-                      Biggest Challenge
+                    <label className="font-space text-[11px] tracking-[3px] text-brand-gray uppercase block mb-2">
+                      {t("apply.challengeLabel")}
                     </label>
                     <textarea
                       name="challenge"
                       required
                       rows={4}
-                      placeholder="What's the #1 thing stopping you from making more money from your audience?"
+                      placeholder={t("apply.challengePlaceholder")}
                       className={`${inputBase} resize-none`}
                     />
                   </div>
 
                   {/* Contact Email */}
                   <div>
-                    <label className="font-space text-[9px] tracking-[3px] text-brand-gray uppercase block mb-2">
-                      Contact Email
+                    <label className="font-space text-[11px] tracking-[3px] text-brand-gray uppercase block mb-2">
+                      {t("apply.emailLabel")}
                     </label>
                     <input
                       type="email"
                       name="email"
                       required
-                      placeholder="your@email.com"
+                      placeholder={t("apply.emailPlaceholder")}
                       className={inputBase}
                     />
                   </div>
@@ -262,10 +260,10 @@ export default function ApplicationForm() {
                     {loading ? (
                       <span className="inline-flex items-center gap-2">
                         <span className="w-4 h-4 border-2 border-brand-black/30 border-t-brand-black rounded-full animate-spin" />
-                        SUBMITTING...
+                        {t("apply.submitting")}
                       </span>
                     ) : (
-                      "SUBMIT APPLICATION →"
+                      t("apply.submit")
                     )}
                   </button>
 
@@ -276,9 +274,8 @@ export default function ApplicationForm() {
                   )}
 
                   {/* Note */}
-                  <p className="font-space text-[10px] text-brand-gray-dark text-center tracking-wide pt-2">
-                    Currently accepting 5 creators for Q1 2026. Applications
-                    reviewed within 48 hours.
+                  <p className="font-space text-[11px] text-brand-gray-dark text-center tracking-wide pt-2">
+                    {t("apply.note")}
                   </p>
                 </form>
               )}
